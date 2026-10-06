@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Socratic Seminar | Communication Compare & Contrast</title>
+<style>
+:root{--ink:#172033;--muted:#5f6b7a;--paper:#fff;--bg:#f3f6fb;--accent:#6d28d9;--accent2:#0f766e;--line:#d9e0ea;--soft:#f8f5ff;--good:#166534;--warn:#92400e}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+header{background:linear-gradient(120deg,#312e81,#6d28d9);color:white;padding:34px 20px}
+.wrap{max-width:1050px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-weight:700;font-size:.78rem;opacity:.85}
+h1{margin:.25rem 0 .4rem;font-size:clamp(2rem,5vw,3.2rem);line-height:1.05} header p{max-width:760px;margin:0}
+.progress-shell{background:#e5e7eb;height:12px;border-radius:20px;overflow:hidden;margin-top:18px}.progress{height:100%;width:0;background:#22c55e;transition:.2s}
+main{padding:24px 16px 70px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;margin:18px 0;box-shadow:0 8px 24px rgba(30,41,59,.06)}
+.taskhead{display:flex;gap:14px;align-items:flex-start}.num{min-width:42px;height:42px;border-radius:12px;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:800}
+h2{margin:0 0 5px;font-size:1.45rem}h3{margin:22px 0 8px;font-size:1.05rem}.hint{background:#ecfeff;border-left:4px solid var(--accent2);padding:12px 14px;border-radius:8px;margin:12px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+label{display:block;font-weight:700;margin:14px 0 6px}.small{font-size:.9rem;color:var(--muted);font-weight:400}
+input,textarea,select{width:100%;padding:11px 12px;border:1px solid #b9c3d0;border-radius:9px;font:inherit;background:#fff;color:var(--ink)}
+textarea{min-height:100px;resize:vertical}.short{min-height:70px}
+.source{border:2px solid #ddd6fe;background:#faf9ff;border-radius:14px;padding:16px;margin:14px 0}.source-title{font-weight:800;color:#5b21b6}
+button{border:0;border-radius:10px;padding:11px 16px;font-weight:800;cursor:pointer;font-size:.95rem}.primary{background:var(--accent);color:#fff}.secondary{background:#e7eaf0;color:#222}.danger{background:#fee2e2;color:#991b1b}.buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.check{display:flex;gap:10px;align-items:flex-start;margin:10px 0}.check input{width:auto;margin-top:5px}.question-example{padding:12px;border:1px solid var(--line);border-radius:10px;margin:8px 0}.good{border-left:5px solid #22c55e}.weak{border-left:5px solid #f59e0b}
+footer{text-align:center;color:var(--muted);padding:25px}.status{font-size:.9rem;color:var(--good);font-weight:700;margin-left:8px}
+@media(max-width:720px){.grid2,.grid3{grid-template-columns:1fr}.card{padding:17px}}
+@media print{header,.buttons,.progress-shell,footer{display:none!important}body{background:white}.card{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="eyebrow">Compare • Contrast • Research • Discuss</div>
+<h1>Socratic Seminar Notecatcher</h1>
+<p><strong>Topic:</strong> Online/Technology-Enhanced Communication vs. In-Person Communication</p>
+<p>Research both forms of communication, compare the evidence, and prepare thoughtful questions and talking points for a Socratic Seminar.</p>
+<div class="progress-shell"><div class="progress" id="progress"></div></div>
+</div>
+</header>
+
+<main class="wrap">
+<section class="card">
+<label>Student Name</label><input data-save id="studentName" placeholder="First and last name">
+<div class="hint"><strong>Big Question:</strong> How does online and technology-enhanced communication compare with in-person communication, and what are the benefits and drawbacks of each?</div>
+</section>
+
+<section class="card">
+<div class="taskhead"><div class="num">1</div><div><h2>Understand the Topic</h2><div class="small">Clarify what you are comparing before you begin.</div></div></div>
+<label>In your own words, what is online or technology-enhanced communication?</label>
+<textarea data-save id="defineTech" placeholder="Examples might include texting, social media, email, video calls, online discussion boards..."></textarea>
+<label>In your own words, what is in-person communication?</label>
+<textarea data-save id="definePerson" placeholder="Explain what face-to-face communication involves."></textarea>
+<div class="grid2">
+<div><label>Examples of technology-enhanced communication</label><textarea data-save id="techExamples" class="short"></textarea></div>
+<div><label>Examples of in-person communication</label><textarea data-save id="personExamples" class="short"></textarea></div>
+</div>
+</section>
+
+<section class="card">
+<div class="taskhead"><div class="num">2</div><div><h2>What Do You Think Before Researching?</h2><div class="small">There is no “right” answer yet. Record your starting ideas.</div></div></div>
+<div class="grid2">
+<div><label>What might online communication do better?</label><textarea data-save id="preTechBetter"></textarea></div>
+<div><label>What might in-person communication do better?</label><textarea data-save id="prePersonBetter"></textarea></div>
+</div>
+<label>Where could misunderstandings happen in either form of communication?</label><textarea data-save id="preMisunderstanding"></textarea>
+<label>Which form do you currently think is more effective for building strong relationships? Why?</label><textarea data-save id="prePosition"></textarea>
+</section>
+
+<section class="card">
+<div class="taskhead"><div class="num">3</div><div><h2>Research the Topic</h2><div class="small">Find your own credible research. Complete at least two source cards.</div></div></div>
+<div class="hint"><strong>Research reminder:</strong> Look for credible authors or organizations, evidence-based information, and a clear publication source. Your summary should be in <strong>your own words</strong>. Copy and paste the direct link to the article.</div>
+<div id="sources"></div>
+<div class="buttons"><button class="primary" onclick="addSource()">+ Add Another Research Source</button></div>
+</section>
+
+<section class="card">
+<div class="taskhead"><div class="num">4</div><div><h2>Compare & Contrast</h2><div class="small">Use your research—not just your opinion.</div></div></div>
+<div class="grid2">
+<div><h3>Technology-Enhanced Communication</h3>
+<label>Advantages</label><textarea data-save id="techAdvantages"></textarea>
+<label>Disadvantages</label><textarea data-save id="techDisadvantages"></textarea>
+<label>Research that supports these ideas</label><textarea data-save id="techSupport"></textarea></div>
+<div><h3>In-Person Communication</h3>
+<label>Advantages</label><textarea data-save id="personAdvantages"></textarea>
+<label>Disadvantages</label><textarea data-save id="personDisadvantages"></textarea>
+<label>Research that supports these ideas</label><textarea data-save id="personSupport"></textarea></div>
+</div>
+<label>List at least THREE important similarities.</label><textarea data-save id="similarities" placeholder="1.&#10;2.&#10;3."></textarea>
+<label>List at least THREE important differences.</label><textarea data-save id="differences" placeholder="1.&#10;2.&#10;3."></textarea>
+<label>When does each form of communication seem to work best?</label><textarea data-save id="bestUses"></textarea>
+</section>
+
+<section class="card">
+<div class="taskhead"><div class="num">5</div><div><h2>Analyze the Evidence</h2><div class="small">Move from “what?” to “so what?”</div></div></div>
+<label>Based on your research, which form appears better for building relationships? Explain with evidence.</label><textarea data-save id="relationships"></textarea>
+<label>Which seems better for communicating complicated or sensitive information? Why?</label><textarea data-save id="complexInfo"></textarea>
+<label>How does technology make communication more accessible—or less accessible?</label><textarea data-save id="accessibility"></textarea>
+<label>Where are misunderstandings more likely? What role do tone, facial expressions, body language, emojis, response time, or other cues play?</label><textarea data-save id="misunderstandings"></textarea>
+<label>Does technology strengthen human communication, weaken it, or do both? Explain using your research.</label><textarea data-save id="synthesis"></textarea>
+<label><strong>So what?</strong> What does comparing these two forms of communication help us understand about human relationships and communication?</label><textarea data-save id="soWhat"></textarea>
+</section>
+
+<section class="card">
+<div class="taskhead"><div class="num">6</div><div><h2>Build Your Socratic Questions</h2><div class="small">Strong seminar questions invite interpretation, evidence, and multiple viewpoints.</div></div></div>
+<div class="question-example weak"><strong>Weak/factual:</strong> What is text messaging?</div>
+<div class="question-example good"><strong>Stronger/Socratic:</strong> How does losing facial expression and body language change the way we interpret a message?</div>
+<div class="hint"><strong>Useful stems:</strong> Why might…? &nbsp; To what extent…? &nbsp; How does…? &nbsp; Which is more effective when…? &nbsp; What evidence challenges…? &nbsp; How might communication change if…?</div>
+<label>Question 1</label><textarea data-save id="q1" class="short"></textarea>
+<label>Question 2</label><textarea data-save id="q2" class="short"></textarea>
+<label>Question 3</label><textarea data-save id="q3" class="short"></textarea>
+<label>Challenge Question — What could you ask someone who disagrees with your position?</label><textarea data-save id="challengeQ" class="short"></textarea>
+<label>Evidence Question — Write a question that would require classmates to use evidence, not just opinion.</label><textarea data-save id="evidenceQ" class="short"></textarea>
+</section>
+
+<section class="card">
+<div class="taskhead"><div class="num">7</div><div><h2>Prepare for the Seminar</h2><div class="small">Choose the ideas you most want available while speaking.</div></div></div>
+<label>My overall position after researching</label><textarea data-save id="finalPosition" placeholder="Based on my research, I think..."></textarea>
+<label>Evidence/finding #1 I want to bring up</label><textarea data-save id="evidence1" class="short"></textarea>
+<label>Evidence/finding #2 I want to bring up</label><textarea data-save id="evidence2" class="short"></textarea>
+<label>One idea I am willing to reconsider if I hear strong evidence</label><textarea data-save id="reconsider" class="short"></textarea>
+<h3>Speaking Starters</h3>
+<div class="grid2">
+<div class="hint"><strong>Build:</strong> “I want to build on what ___ said because…”<br><strong>Evidence:</strong> “The research I found suggests…”</div>
+<div class="hint"><strong>Disagree:</strong> “I see that differently because…”<br><strong>Probe:</strong> “What evidence supports that idea?”</div>
+</div>
+</section>
+
+<section class="card">
+<div class="taskhead"><div class="num">8</div><div><h2>Seminar Ready</h2><div class="small">Check your preparation and create your seminar notes.</div></div></div>
+<div class="check"><input type="checkbox" data-save id="c1"><label for="c1">I included at least two research articles.</label></div>
+<div class="check"><input type="checkbox" data-save id="c2"><label for="c2">I included a working link for each article.</label></div>
+<div class="check"><input type="checkbox" data-save id="c3"><label for="c3">I summarized each article in my own words.</label></div>
+<div class="check"><input type="checkbox" data-save id="c4"><label for="c4">I explained how each article connects to the topic.</label></div>
+<div class="check"><input type="checkbox" data-save id="c5"><label for="c5">I used research to compare and contrast the two forms of communication.</label></div>
+<div class="check"><input type="checkbox" data-save id="c6"><label for="c6">I prepared at least three open-ended Socratic questions.</label></div>
+<div class="buttons">
+<button class="primary" onclick="generatePDF()">📄 Generate Seminar-Ready PDF</button>
+<button class="secondary" onclick="window.print()">Print Full Notecatcher</button>
+<button class="danger" onclick="clearWork()">Clear Saved Work</button><span class="status" id="saveStatus">Autosave on</span>
+</div>
+</section>
+</main>
+<footer>Your work is saved automatically on this device.</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+const KEY='socraticCommunicationV2';
+let state=JSON.parse(localStorage.getItem(KEY)||'{}');
+if(!state.sources) state.sources=[{},{}];
+
+function esc(s=''){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function sourceHTML(s,i){return `<div class="source" data-source="${i}">
+<div class="source-title">Research Source ${i+1}</div>
+<div class="grid2"><div><label>Article title</label><input data-src="title" value="${esc(s.title)}"></div><div><label>Author or organization</label><input data-src="author" value="${esc(s.author)}"></div></div>
+<div class="grid2"><div><label>Website / publication</label><input data-src="publication" value="${esc(s.publication)}"></div><div><label>Date published</label><input data-src="date" value="${esc(s.date)}"></div></div>
+<label>Direct link to the article</label><input data-src="link" type="url" placeholder="https://..." value="${esc(s.link)}">
+<label>Summarize the article in your own words. What is the author/research saying?</label><textarea data-src="summary" placeholder="Write a 2–4 sentence summary.">${esc(s.summary)}</textarea>
+<label>Important evidence, fact, finding, statistic, or idea from this source</label><textarea data-src="evidence">${esc(s.evidence)}</textarea>
+<label>What does this evidence mean in your own words?</label><textarea data-src="meaning">${esc(s.meaning)}</textarea>
+<label>How does this article connect to online/technology-enhanced communication vs. in-person communication?</label><textarea data-src="connection">${esc(s.connection)}</textarea>
+<label>This source mainly helps me understand:</label><select data-src="side"><option value="">Choose...</option><option ${s.side==='Technology-enhanced communication'?'selected':''}>Technology-enhanced communication</option><option ${s.side==='In-person communication'?'selected':''}>In-person communication</option><option ${s.side==='Both'?'selected':''}>Both</option></select>
+${i>1?'<div class="buttons"><button class="danger" onclick="removeSource('+i+')">Remove Source</button></div>':''}</div>`}
+function renderSources(){document.getElementById('sources').innerHTML=state.sources.map(sourceHTML).join(''); bindSources()}
+function addSource(){state.sources.push({});save();renderSources()}
+function removeSource(i){state.sources.splice(i,1);save();renderSources()}
+function bindSources(){document.querySelectorAll('[data-source]').forEach(card=>card.querySelectorAll('[data-src]').forEach(el=>el.addEventListener('input',()=>{state.sources[+card.dataset.source][el.dataset.src]=el.value;save()})))}
+function save(){
+ document.querySelectorAll('[data-save]').forEach(el=>state[el.id]=el.type==='checkbox'?el.checked:el.value);
+ localStorage.setItem(KEY,JSON.stringify(state)); updateProgress();
+ const x=document.getElementById('saveStatus'); if(x){x.textContent='Saved ✓';setTimeout(()=>x.textContent='Autosave on',900)}
+}
+function load(){
+ document.querySelectorAll('[data-save]').forEach(el=>{if(state[el.id]!==undefined){if(el.type==='checkbox')el.checked=state[el.id];else el.value=state[el.id]} el.addEventListener('input',save)});
+ renderSources(); updateProgress()
+}
+function updateProgress(){
+ const fields=[...document.querySelectorAll('textarea[data-save],input[data-save]:not([type=checkbox])')];
+ const filled=fields.filter(x=>x.value.trim()).length;
+ const sourceFilled=state.sources.reduce((n,s)=>n+['link','summary','connection'].filter(k=>(s[k]||'').trim()).length,0);
+ const total=fields.length+state.sources.length*3;
+ document.getElementById('progress').style.width=Math.min(100,Math.round((filled+sourceFilled)/Math.max(total,1)*100))+'%';
+}
+function clearWork(){if(confirm('Clear all saved answers on this device?')){localStorage.removeItem(KEY);location.reload()}}
+function val(id){return (document.getElementById(id)?.value||'').trim()}
+function cleanURL(u){try{let x=new URL(u); return /^https?:$/.test(x.protocol)?x.href:''}catch(e){return ''}}
+
+function generatePDF(){
+ if(!window.jspdf){alert('The PDF library could not load. Check your internet connection and try again.');return}
+ const completed=state.sources.filter(s=>(s.title||s.summary||s.link));
+ if(completed.length<2){alert('Please complete at least two research source cards before generating your seminar PDF.');return}
+ const missing=completed.slice(0,2).some(s=>!cleanURL(s.link||'')||!(s.summary||'').trim()||!(s.connection||'').trim());
+ if(missing){alert('Your first two research sources need a valid article link, summary, and connection to the topic.');return}
+ const {jsPDF}=window.jspdf; const doc=new jsPDF({unit:'pt',format:'letter'}); const W=612,H=792,M=46; let y=48;
+ function newPage(){doc.addPage();y=48}
+ function ensure(h=50){if(y+h>H-48)newPage()}
+ function title(t){ensure(50);doc.setFont('helvetica','bold');doc.setFontSize(17);doc.text(t,M,y);y+=25}
+ function sub(t){ensure(34);doc.setFont('helvetica','bold');doc.setFontSize(11);doc.text(t,M,y);y+=16}
+ function para(t,opts={}){t=(t||'Not completed').trim();doc.setFont('helvetica','normal');doc.setFontSize(9.5);let lines=doc.splitTextToSize(t,W-M*2);ensure(lines.length*12+12);doc.text(lines,M,y);y+=lines.length*12+10}
+ function linkLine(label,u){ensure(30);doc.setFont('helvetica','bold');doc.setFontSize(9);doc.text(label,M,y);let safe=cleanURL(u); if(safe){doc.setTextColor(0,0,180);let display=doc.splitTextToSize(safe,W-M*2);doc.textWithLink(display[0],M+doc.getTextWidth(label)+5,y,{url:safe});doc.setTextColor(0,0,0)}else doc.text('No valid link provided',M+doc.getTextWidth(label)+5,y);y+=18}
+ doc.setFont('helvetica','bold');doc.setFontSize(20);doc.text('Socratic Seminar: Communication',M,y);y+=24;
+ doc.setFontSize(11);doc.setFont('helvetica','normal');doc.text('Online/Technology-Enhanced vs. In-Person Communication',M,y);y+=18;
+ doc.text('Student: '+(val('studentName')||'________________________'),M,y);y+=28;
+ title('Seminar Position & Comparison');
+ sub('My overall position');para(val('finalPosition'));
+ sub('Important similarities');para(val('similarities'));
+ sub('Important differences');para(val('differences'));
+ sub('When each form works best');para(val('bestUses'));
+ sub('Why this comparison matters');para(val('soWhat'));
+ completed.forEach((s,i)=>{
+   newPage(); title('Research Source '+(i+1));
+   sub('Article');para((s.title||'Untitled')+(s.author?' — '+s.author:'')+(s.publication?' | '+s.publication:'')+(s.date?' | '+s.date:''));
+   linkLine('Article link:',s.link||'');
+   sub('Summary in my own words');para(s.summary||'');
+   sub('Important evidence / finding');para(s.evidence||'');
+   sub('What the evidence means');para(s.meaning||'');
+   sub('Connection to the seminar topic');para(s.connection||'');
+ });
+ newPage();title('Seminar Discussion Toolkit');
+ sub('My three strongest Socratic questions');
+ para('1. '+val('q1')+'\n\n2. '+val('q2')+'\n\n3. '+val('q3'));
+ sub('Challenge question');para(val('challengeQ'));
+ sub('Evidence question');para(val('evidenceQ'));
+ sub('Evidence I want to bring up');para('1. '+val('evidence1')+'\n\n2. '+val('evidence2'));
+ sub('Speaking starters');para('Build: “I want to build on what ___ said because…”\nDisagree: “I see that differently because…”\nEvidence: “The research I found suggests…”\nProbe: “What evidence supports that idea?”');
+ sub('Notes During the Seminar');para('____________________________________________________________________\n\n____________________________________________________________________\n\n____________________________________________________________________\n\n____________________________________________________________________');
+ const pages=doc.getNumberOfPages();for(let p=1;p<=pages;p++){doc.setPage(p);doc.setFontSize(8);doc.setTextColor(100);doc.text(`Seminar-ready notes • Page ${p} of ${pages}`,M,H-24);doc.setTextColor(0)}
+ const name=(val('studentName')||'student').replace(/[^a-z0-9]+/gi,'_');
+ doc.save(name+'_Socratic_Seminar_Notes.pdf');
+}
+load();
+</script>
+</body>
+</html>
